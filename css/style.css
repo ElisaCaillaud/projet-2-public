@@ -14,7 +14,7 @@
 }
 
 body {
-  /*display: flex;*/
+  display: flex; /*si je veux mes elements centrés pour grands écrans*/
   justify-content: center;
 }
 
@@ -142,6 +142,10 @@ form button i::before {
   cursor: pointer;
 }
 
+.filtres li:hover {
+  background-color: #deebff;
+}
+
 .filtres li i {
   padding-right: 10px;
 }
@@ -157,6 +161,65 @@ form button i::before {
   border-radius: 100%;
   height: 3px;
   margin-right: 10px;
+}
+
+/*section hebergement*/
+.hebergements h2 {
+  margin: 0 0 20px 0;
+}
+
+.hebergements p {
+  margin: 0 0 5px 0;
+}
+
+.hebergements h3 {
+  margin: 0 0 8px 0;
+}
+
+#afficher-plus {
+  margin: 30px 0 0 0;
+}
+
+/*mise en forme des cards horizontales*/
+.all-six-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes de largeur égale */
+  grid-auto-rows: auto; /* Hauteur automatique des lignes */
+  gap: 20px; /* Espacement entre les éléments */
+}
+
+.card-horizontal {
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  transition: 0.3s;
+  border-radius: 20px;
+  padding: 5px;
+  background-color: white;
+  flex-basis: 30%;
+  margin: 4px;
+}
+
+.card-horizontal img {
+  border-radius: 20px 20px 0 0;
+  height: 110px;
+  object-fit: cover;
+}
+
+/* ombre hover card*/
+.card-horizontal:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Padding container */
+.container {
+  padding: 5px 0 10px 10px;
+}
+
+/*mise en forme activité marseille*/
+.container-card-marseille {
+  display: flex;
+}
+
+.card-marseille {
 }
 
 .card {
@@ -186,13 +249,21 @@ form button i::before {
 .hebergements-and-populaires {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap; /*Permet de faire passer la troisième section activité à marseille sous
+  les deux autres*/
 }
 
 .hebergements-and-populaires section {
-  background-color: var(--main-bg-color);
+  background-color: transparent;
   border-radius: 20px;
   padding: 30px;
   box-sizing: border-box;
+  margin-bottom: 70px;
+}
+
+/*couleur gris sur les fonds des sections, sauf activité à marseille*/
+.hebergements-and-populaires section:not(.activite-marseille) {
+  background-color: var(--main-bg-color);
 }
 
 /****** Hebergements ***********/
