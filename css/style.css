@@ -385,6 +385,7 @@ form button i::before {
   .section-title {
     font-size: 20px;
   }
+
   /*responsive tablette FILTRES top*/
   .filtres h2 {
     margin: 30px 0 0 0;
@@ -468,5 +469,154 @@ form button i::before {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-  /* ... */
+  .main-container {
+    box-sizing: unset;
+  }
+
+  #menu-1 {
+    margin: 0;
+    margin-left: -10px;
+    padding: 20px;
+    width: -webkit-fill-available;
+    border-bottom: 2px solid #0065fc;
+    right: 0;
+    left: 0;
+    color: #0065fc;
+  }
+
+  #menu-2 {
+    margin: 0;
+    margin-right: -10px;
+    padding: 20px;
+    width: -webkit-fill-available;
+    border-bottom: 2px solid #f2f2f2;
+    right: 0;
+    left: 0;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  p,
+  .footer-container a {
+    font-size: 13px;
+  }
+
+  h2,
+  .section-title {
+    font-size: 20px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-menu-header li,
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-menu-header li:before {
+    background-color: transparent;
+  }
+
+  nav img {
+    margin: 20px 0 30px 155px;
+    height: 20px;
+  }
+
+  .nav-menu-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-menu-header li {
+    margin: 0 40px 0 40px;
+  }
+
+  .filtres h2 {
+    margin: 30px 0 0 0;
+  }
+
+  .filtres {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filtres ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  .filtres li {
+    margin: 0 15px 0 0;
+    font-size: 15px;
+    padding-bottom: 12px;
+  }
+
+  .filtre-bouton {
+    display: flex;
+  }
+
+  .card-marseille img {
+    height: 190px;
+  }
+
+  .card-marseille h3 {
+    margin: 15px 0 4px 20px;
+  }
+
+  .all-six-cards {
+    gap: 10px;
+  }
+
+  .hebergements-and-populaires {
+    flex-direction: column;
+  }
+
+  .hebergements-and-populaires section:not(.activite-marseille) {
+    padding: 20px;
+  }
+
+  .hebergements-and-populaires section {
+    padding: 0;
+    margin-bottom: 50px;
+  }
+
+  .hebergements {
+    width: 100%;
+  }
+
+  .populaires {
+    width: 100%;
+  }
+
+  .populaires-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .populaires-cards a {
+    width: 30%;
+  }
+
+  .populaires-cards .card-title {
+    font-size: 14px;
+  }
+
+  .populaires-cards .card-subtitle {
+    font-size: 13px;
+  }
+
+  .container-card-marseille {
+    gap: 20px;
+  }
 }
