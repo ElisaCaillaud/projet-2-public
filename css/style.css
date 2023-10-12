@@ -16,6 +16,7 @@
 body {
   display: flex; /*si je veux mes elements centrés pour grands écrans*/
   justify-content: center;
+  margin-bottom: 0;
 }
 
 .main-container {
@@ -32,6 +33,9 @@ a {
 
 h2 {
   margin-bottom: 0;
+}
+.filtres h2 {
+  margin-bottom: 20px;
 }
 
 /*Modification du menu nav header*/
@@ -151,7 +155,7 @@ form button i::before {
 }
 
 /*Information*/
-.information {
+.information p {
   margin: 0 0 30px 0;
 }
 
@@ -164,8 +168,9 @@ form button i::before {
 }
 
 /*section hebergement*/
-.hebergements h2 {
-  margin: 0 0 20px 0;
+.hebergements h2,
+.activite-marseille h2 {
+  margin: 0 0 30px 0;
 }
 
 .hebergements p {
@@ -215,11 +220,34 @@ form button i::before {
 }
 
 /*mise en forme activité marseille*/
+
+.card-marseille h3 {
+  margin-left: 20px;
+}
+
 .container-card-marseille {
   display: flex;
+  gap: 30px;
 }
 
 .card-marseille {
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  transition: 0.3s;
+  border-radius: 20px;
+  background-color: white;
+  width: 25%;
+  padding-bottom: 5px;
+}
+
+.card-marseille:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-marseille img {
+  width: 100%;
+  object-fit: none;
+  height: 380px;
+  border-radius: 20px 20px 0 0;
 }
 
 .card {
@@ -258,7 +286,7 @@ form button i::before {
   border-radius: 20px;
   padding: 30px;
   box-sizing: border-box;
-  margin-bottom: 70px;
+  margin-bottom: 20px;
 }
 
 /*couleur gris sur les fonds des sections, sauf activité à marseille*/
@@ -316,13 +344,95 @@ form button i::before {
   margin-bottom: 5px;
 }
 
+.footer-container {
+  display: flex;
+  background-color: #f2f2f2;
+  height: 163px;
+  padding: 20px 0 20px 20px;
+  margin-bottom: 0;
+}
+
+.footer-container ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-container li {
+  padding-top: 15px;
+}
+
+.footer-container h3 {
+  margin: 0;
+}
+
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
-@media (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  h3 {
+    font-size: 14px;
+  }
+
+  p,
+  .footer-container a {
+    font-size: 13px;
+  }
+
+  h2,
+  .section-title {
+    font-size: 20px;
+  }
+  /*responsive tablette FILTRES top*/
+  .filtres h2 {
+    margin: 30px 0 0 0;
+  }
+
+  .filtres {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filtres ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  .filtres li {
+    margin: 0 15px 0 0;
+    font-size: 15px;
+    padding-bottom: 12px;
+  }
+
+  .filtre-bouton {
+    display: flex;
+  }
+
+  .card-marseille img {
+    height: 190px;
+  }
+
+  .card-marseille h3 {
+    margin: 15px 0 4px 20px;
+  }
+
+  .all-six-cards {
+    gap: 10px;
+  }
+
   .hebergements-and-populaires {
     flex-direction: column;
+  }
+
+  .hebergements-and-populaires section:not(.activite-marseille) {
+    padding: 20px;
+  }
+
+  .hebergements-and-populaires section {
+    padding: 0;
+    margin-bottom: 50px;
   }
 
   .hebergements {
@@ -331,7 +441,6 @@ form button i::before {
 
   .populaires {
     width: 100%;
-    margin-top: 50px;
   }
 
   .populaires-cards {
@@ -350,6 +459,10 @@ form button i::before {
 
   .populaires-cards .card-subtitle {
     font-size: 13px;
+  }
+
+  .container-card-marseille {
+    gap: 20px;
   }
 }
 
