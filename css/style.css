@@ -100,7 +100,7 @@ input[type="search"]::placeholder {
   color: black;
 }
 
-form button {
+#button-desktop {
   background-color: #0065fc;
   border-radius: 0 15px 15px 0;
   border: none;
@@ -111,7 +111,7 @@ form button {
   cursor: pointer;
 }
 
-form button i::before {
+#button-mobile {
   display: none;
 }
 
@@ -207,6 +207,7 @@ form button i::before {
   border-radius: 20px 20px 0 0;
   height: 110px;
   object-fit: cover;
+  width: 100%;
 }
 
 /* ombre hover card*/
@@ -228,6 +229,7 @@ form button i::before {
 .container-card-marseille {
   display: flex;
   gap: 30px;
+  margin-bottom: 50px;
 }
 
 .card-marseille {
@@ -423,17 +425,13 @@ form button i::before {
     gap: 10px;
   }
 
-  .hebergements-and-populaires {
-    flex-direction: column;
-  }
-
   .hebergements-and-populaires section:not(.activite-marseille) {
     padding: 20px;
   }
 
   .hebergements-and-populaires section {
     padding: 0;
-    margin-bottom: 50px;
+    flex-direction: column;
   }
 
   .hebergements {
@@ -464,6 +462,7 @@ form button i::before {
 
   .container-card-marseille {
     gap: 20px;
+    margin-bottom: 50px;
   }
 }
 
@@ -471,8 +470,10 @@ form button i::before {
 @media (max-width: 767.98px) {
   .main-container {
     box-sizing: unset;
+    padding: 0;
   }
 
+  /*Menu navigation*/
   #menu-1 {
     margin: 0;
     margin-left: -10px;
@@ -486,7 +487,7 @@ form button i::before {
 
   #menu-2 {
     margin: 0;
-    margin-right: -10px;
+    margin-right: -20px;
     padding: 20px;
     width: -webkit-fill-available;
     border-bottom: 2px solid #f2f2f2;
@@ -495,21 +496,21 @@ form button i::before {
   }
 
   main {
-    padding: 0;
+    padding: 0 10px 0 15px;
   }
 
   h3 {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   p,
   .footer-container a {
-    font-size: 13px;
+    font-size: 16px;
   }
 
   h2,
   .section-title {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   nav {
@@ -565,43 +566,75 @@ form button i::before {
     display: flex;
   }
 
-  .card-marseille img {
-    height: 190px;
+  /* Barre de recherche*/
+  #button-desktop {
+    display: none;
   }
 
-  .card-marseille h3 {
-    margin: 15px 0 4px 20px;
+  #button-mobile {
+    display: block;
+    background-color: #0065fc;
+    border-radius: 15px 15px 15px 15px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    padding: 15px 15px 15px 15px;
+    cursor: pointer;
+    position: absolute;
+    left: 355px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.4);
   }
 
-  .all-six-cards {
-    gap: 10px;
+  form input {
+    width: 290px;
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  /*filtres*/
+
+  .container {
+    padding: 10px 0 10px 10px;
+  }
+
+  .filtres ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .filtre-bouton {
+    width: 50%;
+  }
+
+  .filtres li {
+    width: 150px;
+    padding-bottom: 15px;
   }
 
   .hebergements-and-populaires {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    margin: 0;
+    border-radius: 0px;
+    padding: 0px;
+    width: 435px;
+    position: relative;
+    left: -25px;
   }
 
-  .hebergements-and-populaires section:not(.activite-marseille) {
-    padding: 20px;
+  /*Card les plus populaires*/
+  .populaires-cards {
+    display: contents;
   }
 
-  .hebergements-and-populaires section {
-    padding: 0;
-    margin-bottom: 50px;
-  }
-
-  .hebergements {
-    width: 100%;
+  .card {
+    margin: 30px 30px 20px 30px;
   }
 
   .populaires {
     width: 100%;
-  }
-
-  .populaires-cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    padding: 0 !important;
   }
 
   .populaires-cards a {
@@ -612,11 +645,103 @@ form button i::before {
     font-size: 14px;
   }
 
+  .populaires-title {
+    align-items: end;
+    padding: 0 30px 0 25px;
+  }
+
   .populaires-cards .card-subtitle {
     font-size: 13px;
   }
 
+  .populaires h2 {
+    padding: 15px 0 0 20px;
+  }
+
+  /*Card hebergement marseille*/
+
+  .hebergements-and-populaires section:not(.activite-marseille, .populaires) {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .hebergements h2 {
+    padding: 15px 0 0 30px;
+  }
+
+  .hebergements h2,
+  .activite-marseille h2 {
+    margin: 0 0 25px 0;
+  }
+
+  #afficher-plus {
+    margin: 0 0 50px 25px;
+  }
+
+  .card-horizontal {
+    margin: 0 25px 25px 25px;
+  }
+
+  .card-rating {
+    position: absolute;
+    bottom: 10px;
+  }
+
+  .card-marseille img {
+    height: 190px;
+  }
+
+  .card-marseille h3 {
+    margin: 15px 0 4px 20px;
+  }
+
+  .all-six-cards {
+    gap: 10px;
+    display: block;
+  }
+
+  .hebergements p {
+    margin: 0 0 20px 0;
+  }
+
+  .hebergements {
+    width: 100%;
+  }
+
+  /*activite marseille*/
+
   .container-card-marseille {
     gap: 20px;
+    display: block;
+  }
+
+  .card-marseille {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .card-marseille img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .card-marseille h3 {
+    margin-bottom: 20px;
+  }
+
+  /*Footer*/
+
+  .footer-container {
+    display: block;
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    height: 370px;
+    padding-top: 0;
+  }
+
+  .footer-container h3 {
+    padding-top: 10px;
   }
 }
