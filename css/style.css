@@ -57,7 +57,7 @@ nav img {
   text-align: center;
 }
 
-/*Animation menu survol avec ::before*/
+/*Animation menu survol avec ::before -----> élément plus compliqué à réaliser-------->*/
 .nav-menu-header li {
   position: relative; /*element parent*/
   margin: 0 0 0 70px;
@@ -81,7 +81,8 @@ nav img {
   color: #0065fc;
 }
 
-/*Formulaire de recherche*/
+/*Formulaire de recherche-----> élément plus compliqué à réaliser:difficulté pour bien
+découper le champs de recherche pour avoir le bon résultat --------------------------------->*/
 form {
   margin: 20px 0 0;
   display: inline-flex;
@@ -111,6 +112,7 @@ input[type="search"]::placeholder {
   cursor: pointer;
 }
 
+/*-----> élément plus compliqué à réaliser : cacher un deuxieme bouton en mobile------------------>*/
 #button-mobile {
   display: none;
 }
@@ -185,7 +187,7 @@ input[type="search"]::placeholder {
   margin: 30px 0 0 0;
 }
 
-/*mise en forme des cards horizontales*/
+/*mise en forme des cards horizontales -----> élément plus compliqué à réaliser : mise en place de GRID-------->*/
 .all-six-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 colonnes de largeur égale */
@@ -275,7 +277,7 @@ input[type="search"]::placeholder {
   color: var(--main-bg-color);
 }
 
-/****** Hebergements And Populaires ***********/
+/*Hebergements And Populaires*/
 .hebergements-and-populaires {
   display: flex;
   justify-content: space-between;
@@ -296,12 +298,12 @@ input[type="search"]::placeholder {
   background-color: var(--main-bg-color);
 }
 
-/****** Hebergements ***********/
+/* Hebergements **/
 .hebergements {
   width: 65%;
 }
 
-/****** Populaires ***********/
+/* Populaires */
 .populaires {
   width: 32%;
 }
@@ -346,6 +348,7 @@ input[type="search"]::placeholder {
   margin-bottom: 5px;
 }
 
+/*Footer*/
 .footer-container {
   display: flex;
   background-color: #f2f2f2;
@@ -372,7 +375,7 @@ input[type="search"]::placeholder {
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
-/* Medium devices (tablets, less/equal than 1024px) */
+/*----------> Medium devices (tablets, less/equal than 1024px) -------->*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .main-container {
     padding: 0 40px 0 0;
@@ -470,8 +473,8 @@ input[type="search"]::placeholder {
   }
 }
 
-/* Small devices (phones, less than 768px) */
-@media (max-width: 425px) {
+/* -------------->Small devices (phones, less than 768px) ------------->*/
+@media screen and (max-width: 768px) {
   body {
     margin: 0;
     padding: 0;
@@ -614,7 +617,6 @@ input[type="search"]::placeholder {
   }
 
   .filtre-bouton {
-    width: 40%;
     margin-right: 10px;
   }
 
@@ -762,8 +764,8 @@ input[type="search"]::placeholder {
   }
 }
 
-/* Responsive < 320*/
-@media (max-width: 320.98px) {
+/* ------------------->Responsive < 320----------------->*/
+@media (max-width: 425px) {
   nav img {
     margin-left: 140px;
   }
@@ -772,6 +774,7 @@ input[type="search"]::placeholder {
     width: 125%;
   }
 
+  /*-----> élément plus compliqué à réaliser pour faire passer les menus en vertical-------->*/
   .filtres ul {
     display: block;
   }
