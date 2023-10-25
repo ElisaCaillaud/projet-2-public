@@ -374,6 +374,10 @@ input[type="search"]::placeholder {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+  .main-container {
+    padding: 0 40px 0 0;
+  }
+
   h3 {
     font-size: 14px;
   }
@@ -467,10 +471,15 @@ input[type="search"]::placeholder {
 }
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
-  .main-container {
-    box-sizing: unset;
+@media (max-width: 425px) {
+  body {
+    margin: 0;
     padding: 0;
+  }
+
+  .main-container {
+    padding: 0;
+    margin: 0;
   }
 
   /*Menu navigation*/
@@ -529,7 +538,7 @@ input[type="search"]::placeholder {
   }
 
   nav img {
-    margin: 20px 0 30px 155px;
+    margin: 20px 0 30px 180px;
     height: 20px;
   }
 
@@ -587,7 +596,7 @@ input[type="search"]::placeholder {
   }
 
   form input {
-    width: 290px;
+    width: 315px;
     text-align: left;
     padding-left: 20px;
   }
@@ -601,11 +610,12 @@ input[type="search"]::placeholder {
   .filtres ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
   .filtre-bouton {
-    width: 50%;
+    width: 40%;
+    margin-right: 10px;
   }
 
   .filtres li {
@@ -618,7 +628,7 @@ input[type="search"]::placeholder {
     margin: 0;
     border-radius: 0px;
     padding: 0px;
-    width: 435px;
+    width: 455px;
     position: relative;
     left: -25px;
   }
@@ -743,5 +753,51 @@ input[type="search"]::placeholder {
 
   .footer-container h3 {
     padding-top: 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .activite-marseille {
+    width: 112%;
+  }
+}
+
+/* Responsive < 320*/
+@media (max-width: 320.98px) {
+  nav img {
+    margin-left: 140px;
+  }
+
+  .hebergements-and-populaires {
+    width: 125%;
+  }
+
+  .filtres ul {
+    display: block;
+  }
+
+  .filtres li {
+    width: 150px;
+    padding-bottom: 15px;
+  }
+
+  #button-mobile {
+    left: 280px;
+  }
+
+  form input {
+    width: 100%;
+  }
+
+  .card {
+    margin-right: 40px;
+  }
+
+  .card-horizontal {
+    margin-right: 35px;
+  }
+
+  .card-marseille {
+    width: 95%;
   }
 }
