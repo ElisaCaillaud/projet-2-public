@@ -630,9 +630,7 @@ input[type="search"]::placeholder {
     margin: 0;
     border-radius: 0px;
     padding: 0px;
-    width: 455px;
-    position: relative;
-    left: -25px;
+    width: 100%;
   }
 
   /*Card les plus populaires*/
@@ -776,11 +774,13 @@ input[type="search"]::placeholder {
 
   /*-----> élément plus compliqué à réaliser pour faire passer les menus en vertical-------->*/
   .filtres ul {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .filtres li {
-    width: 150px;
+    width: 40%;
     padding-bottom: 15px;
   }
 
