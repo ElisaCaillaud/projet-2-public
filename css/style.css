@@ -128,7 +128,81 @@ input[type="search"]::placeholder {
   font-size: 22px;
 }
 
-/*Modification des filtres de tri*/
+/***** Filtre ****/
+
+.conteneur-filtre {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 30px 0;
+  font-size: clamp(12px, 3vw, 16px);
+}
+
+.box-filtre {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  margin-left: 35px;
+  border-radius: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: none;
+  border: 2px solid #f2f2f2;
+  border-radius: 40px;
+  background-color: rgb(255, 255, 255);
+  transition: all 0.4s ease-in-out;
+  margin-bottom: 10px;
+}
+
+.box-filtre:hover {
+  background-color: #deebff;
+}
+
+.filtre-logo {
+  position: relative;
+  right: 5px;
+  border-radius: 50%;
+  font-size: 20px;
+  width: 60px;
+  height: 60px;
+  color: var(--principale);
+  background-color: var(--secondaire);
+  transition: all 0.4s ease-in-out;
+}
+
+.padding {
+  padding-left: 10px;
+}
+
+.box-filtre:nth-child(2) .filtre-logo:after {
+  content: "\f53a";
+  font-family: "FontAwesome";
+}
+
+.box-filtre:nth-child(3) .filtre-logo:after {
+  content: "\e59d";
+  font-family: "FontAwesome";
+}
+
+.box-filtre:nth-child(4) .filtre-logo:after {
+  content: "\f004";
+  font-family: "FontAwesome";
+}
+
+.box-filtre:nth-child(5) .filtre-logo:after {
+  content: "\f6d3";
+  font-family: "FontAwesome";
+}
+
+.box-filtre h3 {
+  padding: 0 20px 0 10px;
+}
+
+.box-filtre:hover .filtre-logo {
+  transform: rotate(360deg);
+}
+
 .filtres {
   display: flex;
   align-items: center;
@@ -155,6 +229,34 @@ input[type="search"]::placeholder {
 .filtres li i {
   padding-right: 10px;
 }
+
+/*Modification des filtres de tri
+.filtres {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+}
+
+.filtres ul {
+  display: flex;
+  list-style: none;
+}
+
+.filtres li {
+  margin: 0 35px 0 0;
+  border: 2px solid #d9d9d9;
+  padding: 15px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.filtres li:hover {
+  background-color: #deebff;
+}
+
+.filtres li i {
+  padding-right: 10px;
+}*/
 
 /*Information*/
 .information p {
