@@ -14,7 +14,7 @@
 }
 
 body {
-  display: flex; /*si je veux mes elements centrés pour grands écrans*/
+  display: flex; /*centrer pour grands écrans*/
   justify-content: center;
   margin-bottom: 0;
 }
@@ -483,6 +483,10 @@ input[type="search"]::placeholder {
     padding: 0 40px 0 0;
   }
 
+  nav img {
+    margin-left: 45%;
+  }
+
   h3 {
     font-size: 14px;
   }
@@ -643,7 +647,7 @@ input[type="search"]::placeholder {
   }
 
   nav img {
-    margin: 20px 0 30px 180px;
+    margin-left: 45%;
     height: 20px;
   }
 
@@ -867,7 +871,7 @@ input[type="search"]::placeholder {
 /* ------------------->Responsive < 320----------------->*/
 @media (max-width: 425px) {
   nav img {
-    margin-left: 140px;
+    margin-left: 45%;
   }
 
   .hebergements-and-populaires {
