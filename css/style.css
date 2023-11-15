@@ -57,7 +57,7 @@ nav img {
   text-align: center;
 }
 
-/*Animation menu survol avec ::before -----> élément plus compliqué à réaliser-------->*/
+/*Animation menu survol avec ::before pour placer le trait par dessus -----> élément plus compliqué à réaliser-------->*/
 .nav-menu-header li {
   position: relative; /*element parent*/
   margin: 0 0 0 70px;
@@ -70,7 +70,7 @@ nav img {
   height: 2px;
   width: 0;
   left: 0;
-  bottom: 41px; /*position ligne*/
+  bottom: 44px; /*position ligne*/
 }
 
 .nav-menu-header li:hover::before {
@@ -128,12 +128,16 @@ input[type="search"]::placeholder {
   font-size: 22px;
 }
 
-/***** Filtre ****/
+/***** Filtre : plus difficile a mettre en place *******/
+
+#titre-filtre-mobile {
+  display: none;
+}
 
 .conteneur-filtre {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: stretch;
   margin: 30px 0;
   font-size: clamp(12px, 3vw, 16px);
 }
@@ -176,7 +180,7 @@ input[type="search"]::placeholder {
 }
 
 .box-filtre:nth-child(2) .filtre-logo:after {
-  content: "\f53a";
+  content: "\f53a"; /******Fait référence a mon icone*********/
   font-family: "FontAwesome";
 }
 
@@ -209,7 +213,7 @@ input[type="search"]::placeholder {
   max-width: 100%;
 }
 
-.filtres ul {
+/*.filtres ul {
   display: flex;
   list-style: none;
 }
@@ -228,7 +232,7 @@ input[type="search"]::placeholder {
 
 .filtres li i {
   padding-right: 10px;
-}
+}*/
 
 /*Modification des filtres de tri
 .filtres {
@@ -383,8 +387,8 @@ input[type="search"]::placeholder {
 .hebergements-and-populaires {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; /*Permet de faire passer la troisième section activité à marseille sous
-  les deux autres*/
+  flex-wrap: wrap; /******Permet de faire passer la troisième section activité à marseille sous
+  les deux autres*******/
 }
 
 .hebergements-and-populaires section {
@@ -395,7 +399,7 @@ input[type="search"]::placeholder {
   margin-bottom: 20px;
 }
 
-/*couleur gris sur les fonds des sections, sauf activité à marseille*/
+/******couleur gris sur les fonds des sections, sauf activité à marseille*****/
 .hebergements-and-populaires section:not(.activite-marseille) {
   background-color: var(--main-bg-color);
 }
@@ -502,7 +506,7 @@ input[type="search"]::placeholder {
   }
 
   /*responsive tablette FILTRES top*/
-  .filtres h2 {
+  /*.filtres h2 {
     margin: 30px 0 0 0;
   }
 
@@ -520,6 +524,13 @@ input[type="search"]::placeholder {
     margin: 0 15px 0 0;
     font-size: 15px;
     padding-bottom: 12px;
+  }*/
+
+  #titre-filtre-desktop {
+    display: none;
+  }
+  #titre-filtre-mobile {
+    display: block;
   }
 
   .filtre-bouton {
@@ -660,7 +671,7 @@ input[type="search"]::placeholder {
     margin: 0 40px 0 40px;
   }
 
-  .filtres h2 {
+  /*.filtres h2 {
     margin: 30px 0 0 0;
   }
 
@@ -678,6 +689,14 @@ input[type="search"]::placeholder {
     margin: 0 15px 0 0;
     font-size: 15px;
     padding-bottom: 12px;
+  }*/
+
+  #titre-filtre-mobile {
+    display: block;
+  }
+
+  #titre-filtre-desktop {
+    display: none;
   }
 
   .filtre-bouton {
@@ -716,20 +735,20 @@ input[type="search"]::placeholder {
     padding: 10px 0 10px 10px;
   }
 
-  .filtres ul {
+  /*.filtres ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-  }
+  }*/
 
   .filtre-bouton {
     margin-right: 10px;
   }
 
-  .filtres li {
+  /*.filtres li {
     width: 150px;
     padding-bottom: 15px;
-  }
+  }*/
 
   .hebergements-and-populaires {
     flex-direction: column-reverse;
@@ -879,7 +898,7 @@ input[type="search"]::placeholder {
   }
 
   /*-----> élément plus compliqué à réaliser pour faire passer les menus en vertical-------->*/
-  .filtres ul {
+  /*.filtres ul {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -888,6 +907,12 @@ input[type="search"]::placeholder {
   .filtres li {
     width: 40%;
     padding-bottom: 15px;
+  }*/
+  #titre-filtre-mobile {
+    display: block;
+  }
+  #titre-filtre-desktop {
+    display: none;
   }
 
   #button-mobile {
